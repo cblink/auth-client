@@ -1,0 +1,13 @@
+{
+    "name": "cblink/auth-client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hanson",
+            "email": "h@hanc.cc"
+        }
+    ],
+    "require": {
+        "hanson/foundation-sdk": "^2.0"
+    }
+}
