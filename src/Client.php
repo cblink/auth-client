@@ -6,7 +6,7 @@ namespace Cblink\AuthClient;
 
 use Hanson\Foundation\Foundation;
 
-class AuthClient extends Foundation
+class Client extends Foundation
 {
     public function request(string $method, string $url, array $data = [])
     {
