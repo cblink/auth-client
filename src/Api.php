@@ -33,7 +33,12 @@ class Api extends AbstractAPI
 
         $sign = strtolower(md5(http_build_query($params)));
 
-        $response = $this->getHttp()->getClient()->request($method, $url, ['form_params' => array_merge($params, ['app_id' => $this->appId, 'sign' => $sign])]);
+        $response = $this->getHttp()->getClient()->request($method, $url, [
+            'headers' => [
+                'Accept' => 'application/json',
+            ],
+            'form_params' => array_merge($params, ['app_id' => $this->appId, 'sign' => $sign]),
+        ]);
 
         return json_decode($response->getBody()->getContents(), true);
     }
